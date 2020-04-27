@@ -41,7 +41,6 @@ class Loader extends PluginBase {
             $method->setAccessible(true);
             $method->invoke($pk);
             $interface->sendRawPacket($player->getAddress(), $player->getPort(), $pk->getBuffer());
-            #$player->sendTip('Ping: ' . $player->getPing());
         }
     }
 }
