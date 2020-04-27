@@ -10,6 +10,6 @@ class UpdatePingTask extends Task {
     }
 
     public function onRun(int $tick): void {
-        $this->plugin->updatePings();
+        $this->plugin->updatePlayersPing();
     }
 }

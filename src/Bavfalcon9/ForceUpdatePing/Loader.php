@@ -20,7 +20,7 @@ class Loader extends PluginBase {
         $this->getScheduler()->scheduleRepeatingTask(new UpdatePingTask($this), $conf->get('interval') ?? 10);
     }
 
-    public function updatePings(): void {
+    public function updatePlayersPing(): void {
         $interfaces = $this->getServer()->getNetwork()->getInterfaces();
         $wantedInterface;
 
