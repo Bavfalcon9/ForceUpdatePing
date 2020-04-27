@@ -1,0 +1,6 @@
+name: ForceUpdatePing
+main: Bavfalcon9\ForceUpdatePing\Loader
+version: 1.0.0
+api: [3.0.0]
+load: POSTWORLD
+author: Bavfalcon9
