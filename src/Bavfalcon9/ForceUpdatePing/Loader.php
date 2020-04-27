@@ -15,7 +15,7 @@ class Loader extends PluginBase {
 
     public function onEnable(): void {
         $this->saveResource('config.yml');
-        $conf = new Config($this->getDataFolder().'config.yml');
+        $conf = new Config($this->getDataFolder() . 'config.yml');
         $this->raklibStart =  (int) (microtime(true) * 1000);
         $this->getScheduler()->scheduleRepeatingTask(new UpdatePingTask($this), $conf->get('interval') ?? 10);
     }
