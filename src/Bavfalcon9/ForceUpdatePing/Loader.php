@@ -22,7 +22,7 @@ class Loader extends PluginBase {
 
     public function updatePings(): void {
         $interfaces = $this->getServer()->getNetwork()->getInterfaces();
-        $wanted;
+        $wantedInterface;
 
         foreach ($interfaces as $interface) {
             if ($interface instanceof RakLibInterface) {
@@ -40,7 +40,7 @@ class Loader extends PluginBase {
             $method = $ref->getMethod('encodePayload');
             $method->setAccessible(true);
             $method->invoke($pk);
-            $interface->sendRawPacket($player->getAddress(), $player->getPort(), $pk->getBuffer());
+            $wantedInterface->sendRawPacket($player->getAddress(), $player->getPort(), $pk->getBuffer());
         }
     }
 }
