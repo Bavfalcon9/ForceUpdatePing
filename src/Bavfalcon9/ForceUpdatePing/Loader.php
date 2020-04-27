@@ -22,11 +22,11 @@ class Loader extends PluginBase {
 
     public function updatePlayersPing(): void {
         $interfaces = $this->getServer()->getNetwork()->getInterfaces();
-        $wantedInterface;
+        $wantedInterface = null;
 
         foreach ($interfaces as $interface) {
             if ($interface instanceof RakLibInterface) {
-                $wanted = $interface;
+                $wantedInterface = $interface;
                 break;
             }
         }
